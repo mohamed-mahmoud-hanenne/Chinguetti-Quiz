@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@300&family=Poppins:ital,wght@1,200&family=Roboto:ital,wght@0,100;1,300&family=Tajawal:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background: white;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-container {
+  margin-top: -1%;
+  height: auto;
+  width: 580px;
+  padding: 20px;
+  background: #06d6a0;
+  border-radius: 30px 10px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 350px;
+}
+
+.radio-item [type="radio"] {
+  display: none;
+}
+.radio-item + .radio-item {
+  margin-top: 15px;
+}
+
+.radio-item label {
+  display: block;
+  background-color: #ffb703;
+  padding: 6px 5px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  min-width: 250px;
+  position: relative;
+  transition: 0.4s ease-in-out 0s;
+}
+.radio-item label:after,
+.radio-item label:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.radio-item label:after {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #524eee;
+  left: 20px;
+  top: calc(50% - 12px);
+}
+.radio-item label:before {
+  background: #524eee;
+  height: 10px;
+  width: 10px;
+  left: 27px;
+  top: calc(50% - 5px);
+  transform: scale(5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+  border-color: #524eee;
+}
+.radio-item [type="radio"]:checked ~ label:before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+label {
+  margin: 2px;
+  vertical-align: middle;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  background: rgba(0, 0, 0, 0.2);
+  background-color: #06d6a0;
+}
+.panel-heading {
+  margin-bottom: 20px;
+  background-color: #06d6a0;
+  font-size: 24px;
+  font-family: "Georgia";
+  font-weight: bold;
+}
+
+.btn-group {
+  width: 100%;
+  margin: 0 auto 10px auto;
+}
+.back {
+  height: 50px;
+  width: 120px;
+  margin: 10px 25px;
+  border: none;
+  outline: none;
+  color: black;
+  background: #524eee;
+  font-size: 22px;
+  border: 2px solid black;
+  font-weight: bold;
+  font-family: "Acme";
+  border-radius: 20px 5px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 70%;
+}
+#clear {
+  outline: none;
+  color: black;
+  border: none;
+  background: #524eee;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Acme";
+  cursor: pointer;
+}
+
+.continue {
+  height: 50px;
+  width: 120px;
+  background-color: #524eee;
+  color: black;
+  border: 2px solid black;
+  border-radius: 20px 5px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Acme";
+  cursor: pointer;
+  margin-left: 70%;
+}
+.continue .back:last-child {
+  margin: 10px 0;
+}
+.back:hover,
+#clear:hover {
+  background: #e91e3a;
+}
+
+/* Multi-Part CSS */
+input[type="checkbox"] {
+  position: absolute;
+  /* Position the checkbox in upper left corner */
+  opacity: 0;
+}
+
+/* Styling Parts */
+#part1,
+#part2,
+#part3,
+#part4,
+#part5,
+#part6,
+#part7,
+#part8 {
+  z-index: 2;
+  display: block;
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Hidden Parts */
+
+#part2,
+#part3,
+#part4,
+#part5,
+#part6,
+#part7,
+#part8 {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Show Step 2 & Hide Step  */
+#step2:checked ~ #part2 {
+  opacity: 1;
+  height: auto;
+}
+#step2:checked ~ #part1 {
+  opacity: 0;
+  height: 0;
+  display: none;
+}
+
+/* Show Step 3  & Hide Step 2 */
+#step3:checked ~ #part3 {
+  opacity: 1;
+  height: auto;
+}
+#step3:checked ~ #part2 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* Show Step 4  & Hide Step 3 */
+#step4:checked ~ #part4 {
+  opacity: 1;
+  height: auto;
+}
+#step4:checked ~ #part3 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#step5:checked ~ #part5 {
+  opacity: 1;
+  height: auto;
+}
+#step5:checked ~ #part4 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#step6:checked ~ #part6 {
+  opacity: 1;
+  height: auto;
+}
+#step6:checked ~ #part5 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+#step7:checked ~ #part7 {
+  opacity: 1;
+  height: auto;
+}
+#step7:checked ~ #part6 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+button.validebtn {
+  height: 50px;
+  width: 120px;
+  margin: 10px 25px;
+  border: 2px solid black;
+  outline: none;
+
+  border-radius: 20px 5px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 70%;
+  background: #70e000;
+  color: black;
+}
+button.validebtn:hover {
+  background: #5f84fe;
+}
+button.startbtn,
+button.corigbtn {
+  height: 50px;
+  width: 120px;
+  margin: 10px 25px;
+  border: 2px solid black;
+  outline: none;
+
+  border-radius: 20px 5px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Acme";
+  cursor: pointer;
+  background: #70e000;
+  color: black;
+}
+button.startbtn {
+  margin-right: 70%px;
+  margin-top: 30px;
+}
+
+button.startbtn:hover,
+button.corigbtn:hover {
+  background: #5f84fe;
+}
+
+.box {
+  padding: 10px 20px;
+  background: #06d6a0;
+  border-radius: 12px;
+}
+.box label {
+  display: flex;
+  height: 53px;
+  width: 100%;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 50px;
+  margin: 10px 0;
+  padding-left: 10px;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+button.passbtn {
+  margin-left: 70px;
+  padding: 8px;
+  border: none;
+  width: 45%;
+  background: black;
+  color: white;
+  font-size: 24px;
+  margin: 7px 3px;
+  cursor: pointer;
+  outline: none;
+  font-family: "Acme";
+  margin-bottom: 10px;
+  transition: background 0.3s ease-in-out;
+  box-shadow: 0px 5px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+button.passbtn:hover {
+  background: #5f84fe;
+}
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+}
+.waviy span {
+  font-size: 60px;
+  color: blue;
+  font-family: "Rakkas";
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
+  }
+}
+.quiz_user {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-family: "Lobster";
+
+  padding-left: 30px;
+}

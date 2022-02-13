@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato";
+  background-color: white;
+}
+
+.welcome {
+  width: 400px;
+  margin-top: 10%;
+  margin-left: 36%;
+}
+
+.welcome_form input {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  border: 2px solid black;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 17px;
+}
+.welcome_form label {
+  font-size: 26px;
+  font-family: "Acme";
+}
+.welcome_form input:focus {
+  outline: none;
+}
+
+.welcome_form button {
+  border: none;
+  display: block;
+  width: 96%;
+  font-family: "Acme";
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #06d6a0;
+  color: black;
+  font-size: 26px;
+  transition: 0.4s all;
+}
+
+.welcome_form button:hover {
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+.instructions {
+  margin-top: 8%;
+  height: 350px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  margin-left: 36%;
+}
+.titles {
+  font-size: 24px;
+  color: black;
+  margin: 2px;
+  font-family: "Acme";
+  font-weight: bold;
+}
+.rules {
+  font-family: "Rakkas";
+  font-size: 16px;
+  margin-top: -8px;
+}
